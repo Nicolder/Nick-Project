@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-twilight-darkest text-twilight-cream font-sans m-0 p-0 overflow-x-hidden;
+    /* Fundo escuro com uma sutil textura radial */
+    background-image: radial-gradient(circle at 50% 0%, #1C1930 0%, #0B0A10 70%);
+    background-attachment: fixed;
+  }
+}
+
+@layer utilities {
+  .glass-panel {
+    @apply bg-twilight-dark/40 backdrop-blur-xl border border-white/10 shadow-glass;
+  }
+  .glass-panel-inner {
+    @apply bg-white/5 backdrop-blur-md border border-white/5 shadow-glass-inner;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(11, 10, 16, 0.8); 
+}
+::-webkit-scrollbar-thumb {
+  background: #B5A8D5; 
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #EAA9B8; 
+}
